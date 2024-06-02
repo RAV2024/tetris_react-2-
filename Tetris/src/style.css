@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #000;
+    color: rgb(63, 63, 112);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  
+  .tetris {
+    font-size: 55px;
+    margin: auto;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .gameControls{
+    position: relative;
+    gap: 100px;
+  }
+
+  #startButton, #pauseButton {
+    background-color: #5334db; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    margin: 0 10px; /* Добавляем отступы слева и справа от кнопок */
+  }
+
+  #startButton:hover, #pauseButton:hover {
+    background-color: rgb(128, 0, 77); 
+  }
+
+
+  .main {
+    width: 370px; 
+    height: 720px;
+    margin: 20px auto 0;
+    border: 10px solid rgb(255, 255, 255);
+    display: grid; 
+    grid-template-columns: repeat(10, 35px); 
+    grid-template-rows: repeat(20, 35px); 
+    gap: 0; 
+  }
+  
+  .cell {
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  .movingCell {
+    background-color: rgb(63, 63, 112);
+  }
+  
+  .fixedCell {
+    background-color: rgb(128, 0, 77);
+  }
+  
+  #next-tetro {
+    display: grid;
+    grid-template-columns: repeat(3, 35px); 
+    grid-template-rows: repeat(3, 35px); 
+    gap: 0;
+    position: absolute;
+    bottom: 500px;
+    right: 300px;
+    font-size: 0;
+  }
+
+  .next-tetro-container {
+    width: 100px; 
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .next-tetro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 1px; 
+  }
+  
+  .gameOverMessage1 {
+    font-size: 100px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    display: flex;
+    position: absolute;
+    bottom: 220%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+
+
+
+  
